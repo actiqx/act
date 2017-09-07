@@ -1,0 +1,87 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-app">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+            </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+
+    <!-- TABS -->
+    <ion-tabs >
+
+      <ion-tab  title="Home" icon-off="ion-home" icon-on="ion-home" href="#/app/dashboard">
+        <ion-nav-view name="tab-home"> </ion-nav-view>
+      </ion-tab>
+      <ion-tab title="Posttask" icon-off="ion-clipboard" icon-on="ion-clipboard" href="#/app/posttask">
+        <ion-nav-view name="tab-posttask"></ion-nav-view>
+      </ion-tab>
+
+      <ion-tab title="Search" icon-off="ion-search" icon-on="ion-search" href="#/app/search">
+        <ion-nav-view name="tab-search"></ion-nav-view>
+      </ion-tab>
+
+
+      <ion-tab title="chat" icon-off="ion-chatboxes" icon-on="ion-chatboxes" href="#/app/chat">
+        <ion-nav-view name="tab-chat"></ion-nav-view>
+      </ion-tab>
+
+
+    </ion-tabs>
+
+  </ion-side-menu-content>
+
+  <!-- Side Menu (left) -->
+
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-app">
+      <h1 class="title">Left</h1>
+    </ion-header-bar>
+    <ion-content>
+      <ion-list>
+</ion-item>
+
+       <div class="profile">
+      <div class="avatarimg" style="background-image: url('//ionicframework.com/img/docs/spengler.jpg');">
+
+
+
+      </div>
+        <div class="avatarname">Pretty Hate Machine</div>
+        </div>
+      <div class="tabs tabs-dark tabs-icon-top static">
+        <a ui-sref="app.activity" class="tab-item" href="#/app/">
+<i class="icon ion-android-notifications"></i></a>
+        <a ui-sref="app.profile" class="tab-item" href="#/profile/">
+<i class="icon ion-android-people"></i></a>
+
+        <a ui-sref="app.activity" class="tab-item" href="#/app/">
+<i class="icon ion-settings"></i></a>
+      </div>
+
+       </ion-item>
+      </ion-list>
+      <ion-list>
+
+        <ion-item item-type="item-icon-left" nav-clear menu-close href="#/dashboard">
+          <i class="icon ion-home"></i> Home
+        </ion-item>
+        <ion-item item-type="item-icon-left" nav-clear menu-close href="#/app/login">
+          <i class="icon ion-locked"></i> Login
+        </ion-item>
+        <ion-item item-type="item-icon-left" nav-clear menu-close href="#/app/changepassword">
+          <i class="icon ion-locked"></i> Change Password
+        </ion-item>
+        <ion-item item-type="item-icon-left" nav-clear menu-close href="#/app/payment">
+          <i class="icon ion-locked"></i> Payment
+        </ion-item>
+        <ion-item item-type="item-icon-left" nav-clear menu-close href="#/app/help">
+          <i class="ion-ios-help"></i> Help
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

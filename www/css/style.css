@@ -1,1 +1,392 @@
 /* Empty. Add your own CSS if you like */
+
+.bar-app {
+    background: #E91E63 !important;
+    color: #fff;
+}
+  .bar .title {
+  color: #fff !important;
+  }
+.has-header{
+  top:20px !important;
+}
+.hero{
+    background-position: center;
+    background-size: cover;
+    border: 1px solid rgba(255,255,255,.8);
+
+    display: inline-block;
+
+    left: auto;
+    margin-bottom: 10px;
+    position: relative;
+    width: 88px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+    color: #fff;
+    height: 200px;
+    position: relative;
+    text-align: center;
+     width: 100%;
+}
+
+
+.content{
+    background-position: center;
+    background-size: cover;
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 50%;
+    display: inline-block;
+    height: 88px;
+    left: auto;
+    margin-bottom: 10px;
+    position: relative;
+    width: 88px;
+}
+.avatar{
+    background-position: center;
+    background-size: cover;
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 50%;
+    display: inline-block;
+    height: 88px;
+    left: auto;
+    margin-bottom: 30px;
+    position: relative;
+    width: 88px;
+
+}
+.profile{
+    background: #37474F;
+height: 200px;
+}
+.profile .avatarimg {
+    background-position: center;
+    background-size: cover;
+    border: 1px solid rgba(255,255,255,.8);
+    border-radius: 50%;
+    display: inline-block;
+    height: 80px;
+    left: auto;
+
+    position: relative;
+    width: 80px;
+    margin-left: 35%;
+    margin-top:10%;
+}
+.profile .avatarname {
+ position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+
+
+
+/*Profile Style Start */
+.profileContainer{
+  height: 100%;
+  width: 100%;
+}
+.profileContainer .userRatingInfoContainer{
+      position: relative;
+      width: 100%;
+      height: 46%;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+}
+.profileContainer .userRatingInfoContainer .userBackground{
+  background: #7b7b7b;
+ height: 100%;
+ opacity: .6;
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+    z-index: 1;
+}
+.profileContainer .userRatingInfoContainer .userImageContainer{
+  width: 100%;
+  height: 60%;
+  position: relative;
+  z-index: 2;
+}
+.profileContainer .userRatingInfoContainer .userImageContainer .userImageContent{
+  width: 100%;
+  height: 80%;
+}
+
+.profileContainer .userRatingInfoContainer .userImageContainer .userImageContent .userImg{
+  height: 80px;
+width: 80px;
+border-radius: 40px;
+border: 2px solid #4a4848;
+margin-left: calc(50% - 40px);
+margin-right: calc(50% - 40px);
+margin-top: 6px;
+margin-bottom: 2px;
+}
+
+.profileContainer .userRatingInfoContainer .userImageContainer .userImageContent .userName{
+  width: 100%;
+      font-size: 15px;
+      color: #fff;
+      text-align: center;
+}
+.profileContainer .userRatingInfoContainer .ratingContainer{
+  width: 100%;
+  height: 40%;
+  position: relative;
+  z-index: 2;
+}
+.profileContainer .userRatingInfoContainer .ratingContainer .rating{
+  width: 100%;
+  height: 30px;
+}
+.profileContainer .userRatingInfoContainer .ratingContainer .rating span.stars, span.stars span {
+    display: block;
+    background: url('../img/stars.png') 0 -24px repeat-x;
+    width: 120px;
+    height: 24px;
+    margin-left: calc(50% - 60px);
+    margin-right: calc(50% - 60px);
+}
+.profileContainer .userRatingInfoContainer .ratingContainer .rating span.stars span {
+    background-position: 0 0;
+}
+.profileContainer .userRatingInfoContainer .ratingContainer .ratingInfo{
+  width: 100%;
+  height: calc(100% - 30px);
+}
+.profileContainer .userRatingInfoContainer .ratingContainer .ratingInfo .ratingStatus{
+    width: 33.3%;
+    height: 100%;
+    padding: 1px;
+    display: inline-block;
+}
+.profileContainer .userRatingInfoContainer .ratingContainer .ratingInfo .ratingStatus .statusCount{
+  width: 100%;
+  height: 20px;
+margin-bottom: 2px;
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+}
+.profileContainer .userRatingInfoContainer .ratingContainer .ratingInfo .ratingStatus .statusName{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+}
+.profileContainer .verificationContainer{
+  width: 100%;
+  height: 27%;
+}
+.profileContainer .verificationContainer .headerContent{
+  width: 100%;
+  background-color: #ccc;
+  height: 32px;
+  padding: 5px;
+  font-size: 22px;
+  color: #232222;
+}
+.profileContainer .verificationContainer .verificationListContent{
+  width: 100%;
+  height: calc(100% - 32px);
+  padding: 5px;
+}
+.profileContainer .verificationContainer .verificationListContent .verificationItem{
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  display: inline-block;
+  margin: 4px;
+  background: #232222;
+}
+.profileContainer .verificationContainer .verificationListContent .verificationItem .icon{
+  height: 22px !important;
+  width: 22px !important;
+}
+.profileContainer .skillContainer{
+  width: 100%;
+  height: 27%;
+}
+.profileContainer .skillContainer .headerContent{
+  width: 100%;
+  background-color: #ccc;
+  height: 32px;
+  padding: 5px;
+  font-size: 22px;
+  color: #232222;
+}
+.profileContainer .skillContainer .skillListContent{
+  width: 100%;
+  height: calc(100% - 32px);
+  padding: 5px;
+}
+.profileContainer .skillContainer .skillListContent .skillItem{
+  height: auto;
+  width: 100%;
+  color: #232222;
+}
+/*Profile Style End */
+
+/* Signup Style Start*/
+.signup .rowContent{
+  margin-bottom: 0px !important;
+}
+/* .signup .file-field .btn, .signup .file-field .btn-large{
+      float: left;
+     height: 2rem; 
+    line-height: 2rem; 
+} */
+.signup input{
+      margin: 0 0 6px 0 !important;
+}
+
+/* Signup Style End*/
+/* Your application styles go here */
+.bar-app .title {
+    color: #fff !important;
+}
+.bar-app {
+    border-color: #b2b2b2;
+    background-color: #E91E63 !important;
+    background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);
+    color: #fff;
+}
+  .tabs{
+    background: #747474 !important;
+    color: #fff !important;
+  }
+
+   .test-open-class {
+            display: block;
+        }
+        .test-close-class {
+            display: none;
+        }
+.tabs{
+position: absolute !important;
+}
+/*Custom Color*/
+.button.button-grey {
+    border-color: #585858;
+    background-color: #585858;
+    color: #fff; }
+    .button.button-grey:hover {
+      color: #fff;
+      text-decoration: none; }
+    .button.button-grey.active, .button.button-grey.activated {
+      border-color: #585858;
+      background-color: #686868;
+      box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1); }
+    .button.button-grey.button-clear {
+      border-color: transparent;
+      background: none;
+      box-shadow: none;
+      color: #585858; }
+    .button.button-grey.button-icon {
+      border-color: transparent;
+      background: none; }
+    .button.button-grey.button-outline {
+      border-color: #585858;
+      background: transparent;
+      color: #585858; }
+      .button.button-grey.button-outline.active, .button.button-grey.button-outline.activated {
+        background-color: #585858;
+        box-shadow: none;
+        color: #fff; }
+
+/*End*/
+
+.light{
+	background-color: #2E2E31;
+}
+
+.linegrey{
+
+	background-color: #2E2E31;
+	border:none;
+	border-bottom: 1px solid #8DB4B4;
+}
+
+.top180{
+	margin-top: 180px;
+}
+
+input.white{
+	color:#fff;
+	font-size:18px;
+}
+
+.right8{
+	right: 8px;
+}
+
+.light-grey{
+	background-color: #EDEBEE;
+	border:0px;
+}
+
+.line-light-grey{
+	background-color: #EDEBEE;
+	border:none;
+	border-bottom: 1px solid #8DB4B4;
+}
+
+.bottommsg{
+	position: absolute !important;
+	bottom:52px;
+	width: 100%;
+}
+
+.divsend{
+	background-color:#D5D5D9;
+	margin-left: 7px;
+}
+
+.iconsend{
+	font-size: 18px;
+}
+
+.width70{
+	width: 75%;
+	margin-right:0px; 
+}
+
+.log{
+	text-align:center;
+	font-size: 13px;
+	color: #8A8A8A;
+	padding: 7px 14px 7px 14px;
+
+}
+
+.message{
+	padding: 7px 14px 7px 14px;
+    font-size: 16px;
+}
+
+.nopadtop{
+padding-top: 0px;
+}
+
+.content{
+	bottom:68px;
+}
+.scroll-content {
+  position: absolute;
+  top: 24px !important;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  margin-top: -1px;
+  padding-top: 1px;
+  margin-bottom: -1px;
+  width: auto;
+  height: auto;
+  }

@@ -18,28 +18,105 @@
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+   
+  <link rel="stylesheet" href="lib/materialize/bin/materialize.css" />
+  <link rel="stylesheet" href="lib/waves/dist/waves.min.css" />
+  <link rel="stylesheet" href="lib/ionic-material/dist/ionic.material.css" />
+  <link rel="stylesheet" href="lib/ionic-material/dist/ionic.material.min.css" />
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
 
     <!-- ionic/angularjs js -->
-    <script src="lib/ionic/js/ionic.bundle.js"></script>
+   
+    <script src="lib/jquery/dist/jquery.js"></script>
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular-animate/angular-animate.js"></script>
+  <script src="lib/angular-sanitize/angular-sanitize.js"></script>
+  <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+   <script src="lib/ionic/js/ionic.bundle.js"></script>
+ 
+  <script src="lib/materialize/bin/materialize.js"></script>
+  <script src="lib/underscore/underscore.js"></script>
+  <script src="lib/waves/dist/waves.min.js"></script>
+  <script src="lib/ionic-material/dist/ionic.material.js"></script>
+  <script src="lib/ionic-material/dist/ionic.material.min.js"></script>
+  <script src="lib/vsGoogleAutocomplete/dist/vs-google-autocomplete.js"></script>
+  <script src="lib/vsGoogleAutocomplete/dist/vs-autocomplete-validator.js"></script>
+  
+  <script src="lib/angular-materializecss-autocomplete/angular-materializecss-autocomplete.js"></script>
+  <script src="lib//materialize-clockpicker/dist/js/materialize.clockpicker.js"></script>
+  <!-- endbower -->
+   <script src="lib/socket.io-client/dist/socket.io.js"></script>
+  <script src="lib/angular-socket-io/socket.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
-
+ <script src="lib/ngCordova/dist/ng-cordova.js"></script>
     <!-- your app's js -->
-    <script src="js/app.js"></script>
-  </head>
-  <body ng-app="starter">
+   <!-- build:js scripts/scripts.js -->
+  <script src="js/app.js"></script>
+  <script src="js/core/app.run.js"></script>
+  <script src="js/core/app.config.js"></script>
+<script src="js/core/app.constant.js"></script>
+<script src="js/blocks/exception/exception.module.js"></script>
+<script src="js/blocks/exception/exception.js"></script>
 
-    <ion-pane>
+  <script src="js/blocks/logger/logger.module.js"></script>
+  <script src="js/blocks/logger/logger.js"></script>
+ <script src="js/component/factory/factory.module.js"></script>
+<script src="js/component/services/service.module.js"></script>
+  <script src="js/modules/layout/layout.modules.js"></script>
+  <script src="js/modules/layout/layout.controller.js"></script>
+   <script src="js/component/factory/actiqxapi.factory.js"></script>
+<script src="js/component/factory/dataservice.factory.js"></script>
+<script src="js/component/factory/chat.factory.js"></script>
+<script src="js/component/services/session.service.js"></script>
+<script src="js/component/services/common.service.js"></script>
+<script src="js/component/services/api.service.js"></script>
+<script src="js/modules/signup/signup.module.js"></script>
+  <script src="js/modules/signup/signup.controller.js"></script>
+  <script src="js/modules/login/login.module.js"></script>
+  <script src="js/modules/login/login.controller.js"></script>
+<script src="js/component/services/dashboard.service.js"></script>
+<script src="js/component/services/task.service.js"></script>
+  <script src="js/modules/dashboard/dashboard.module.js"></script>
+  <script src="js/modules/posttask/posttask.module.js"></script>
+  <script src="js/modules/posttask/posttask.controller.js"></script>
+  <script src="js/modules/chat/chat.module.js"></script>
+  <script src="js/modules/chat/chat.controller.js"></script>
+  <script src="js/modules/login/login.module.js"></script>
+  <script src="js/modules/login/login.controller.js"></script>
+
+
+
+
+
+  <script src="js/modules/dashboard/dashboard.controller.js"></script>
+   <script src="js/modules/dashboard/categorydetails.controller.js"></script>
+  <script src="js/component/directive/directive.module.js"></script>
+  <script src="js/component/directive/dashboard.directive.js"></script>
+  <script src="js/component/directive/autocomplete.directive.js"></script>
+  <script src="js/component/directive/autocompleteview.directive.js"></script>
+  <script src="js/component/directive/timepicker.directive.js"></script>
+
+ <script src="js/modules/profile/profile.module.js"></script>
+  <script src="js/modules/profile/profile.controller.js"></script>
+    <script src="js/modules/changepassword/changepassword.module.js"></script>
+  <script src="js/modules/changepassword/changepassword.controller.js"></script>
+
+  <script src="js/configuration/configuration.js"></script>
+  </head>
+  <body ng-app="app">
+
+    <!-- <ion-pane>
       <ion-header-bar class="bar-stable">
         <h1 class="title">Ionic Blank Starter</h1>
       </ion-header-bar>
       <ion-content>
       </ion-content>
-    </ion-pane>
+    </ion-pane> -->
+    <ion-nav-view> </ion-nav-view>
   </body>
 </html>

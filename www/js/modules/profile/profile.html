@@ -1,0 +1,46 @@
+<div class="profileContainer">
+  <div class="userRatingInfoContainer" style="background-image: url('../../../images/user2.jpg');">
+    <div class="userBackground"></div>
+    <div class="userImageContainer">
+      <div class="userImageContent">
+            <img src="../../../images/ProfilePic2.jpg" class="userImg" />
+            <div class="userName">Selena Gomez</div>
+      </div>
+    </div>
+    <div class="ratingContainer">
+      <div class="rating">
+        <span class="stars">
+          <span ng-style="{ 'width': profilevm.getStars(profilevm.ratings.number) }"></span>
+      </span>
+      </div>
+      <div class="ratingInfo">
+        <div class="ratingStatus" data-ng-repeat="status in profilevm.ratingInfo">
+            <span class="statusCount">{{status.StatusCount}}</span>
+            <span class="statusName">{{status.StatusName}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="verificationContainer">
+    <div class="headerContent">
+      <span class="content-Left">Verification</span>
+      <span class="content-Right"><i class="fa fa-pencil headerIcon" aria-hidden="true"></i></span>
+    </div>
+    <div class="verificationListContent">
+      <div class="verificationItem" ng-repeat="item in profilevm.verificationList">
+        <md-icon md-svg-src="../../img/{{item.Icon}}" class="icon"></md-icon>
+      </div>
+    </div>
+  </div>
+  <div class="skillContainer">
+    <div class="headerContent">
+      <span class="content-Left">Skill</span>
+      <span class="content-Right"><i class="fa fa-pencil headerIcon" aria-hidden="true"></i></span>
+    </div>
+    <div class="skillListContent">
+      <div class="skillItem">
+        <span data-ng-repeat="skill in profilevm.skillInfo">{{skill}}<span data-ng-show="$index < (profilevm.skillInfo.length-1)">, </span></span>
+      </div>
+    </div>
+  </div>
+</div>

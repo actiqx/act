@@ -1,0 +1,79 @@
+<ion-view view-title="Sign Up">
+  <ion-content>
+    <div class="row signup">
+      <form class="col s12" method="post">
+        <div class='row rowContent'>
+          <div class='col s12'>
+          </div>
+        </div>
+
+        <div class='row rowContent'>
+          <div class='input-field col s12'>
+            <input class='validate' type='text' ng-model="vm.newuser.name" name='name' id='name' />
+            <label for='name'>Enter your Name</label>
+          </div>
+        </div>
+        <div class='row rowContent'>
+          <div class='input-field col s12'>
+            <input class='validate' type='email' ng-model="vm.newuser.email" name='email' id='email' />
+            <label for='email'>Enter your email</label>
+          </div>
+        </div>
+
+        <div class='row rowContent'>
+          <div class='input-field col s12'>
+            <input class='validate' type='text' ng-model="vm.newuser.mobile" name='mobile' id='mobile' />
+            <label for='mobile'>Enter your Mobile No</label>
+          </div>
+        </div>
+
+        <div class='row rowContent'>
+          <div class='input-field col s12'>
+            <input class='validate' type='password' ng-model="vm.newuser.password" name='password' id='password' />
+            <label for='password'>Enter your password</label>
+          </div>
+        </div>
+        <div class="row rowContent">
+          <div class="file-field input-field">
+            <div class="btn">
+              <span>User Image</span>
+              <input type="file">
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text">
+            </div>
+          </div>
+        </div>
+        <div class='row rowContent'>
+          <div class="input-field col s6">
+            <label for="timepicker_from">From Time </label>
+            <input time-picker id="timepicker_from" ng-model="vm.newuser.timeSlots.start" class="timepicker" type="text">
+          </div>
+          <div class="input-field col s6">
+            <label for="timepicker_to">To Time </label>
+            <input time-picker id="timepicker_to" ng-model="vm.newuser.timeSlots.end" class="timepicker" type="text">
+          </div>
+        </div>
+        <div class="row rowContent">
+          <div class="input-field col s12">
+            <label for="location">Location</label>
+            <input id="location" vs-google-autocomplete ng-model="vm.locAddress.name" vs-place="vm.locAddress.place" vs-latitude="vm.locAddress.components.location.lat"
+              vs-longitude="vm.locAddress.components.location.long" type="text" name="address" id="address" class="form-control">
+          </div>
+        </div>
+        <br />
+
+        <center>
+          <div class='row'>
+            <button type='submit' name='btn_register' ng-click="vm.SignInCall()" class='col s12 btn btn-large waves-effect indigo'>Register</button>
+          </div>
+        </center>
+      </form>
+    </div>
+
+
+
+
+
+  </ion-content>
+</ion-view>
