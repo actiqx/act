@@ -3,7 +3,7 @@
 
     angular
         .module('app.directive', [
-
+'app.service'
         ]);
 
 }());

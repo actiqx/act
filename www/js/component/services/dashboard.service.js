@@ -5,8 +5,8 @@
     .module('app.service')
     .service('dashboardService', dashboardService)
 
-  dashboardService.$inject = ['$http', 'server', 'exception', 'logger'];
-  function dashboardService($http, server, exception, logger) {
+  dashboardService.$inject = ['$http','sharedService','server', 'exception', 'logger'];
+  function dashboardService($http,sharedService,server, exception, logger) {
     var servicecalls = {
       getdashboarddata: getdashboarddata
     };
@@ -14,7 +14,7 @@
 
     function getdashboarddata() {
 
-     return $http.get(`${server.host}${server.dashboard}`)
+     return sharedService.GetListData(`${server.dashboard}`)
         .then(success)
         .catch(fail);
 

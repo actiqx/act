@@ -1,26 +1,26 @@
-Ionic App Base
-==============
+#Ionic Setup Step
+====================
+1. git clone https://github.com/actiqx/act.git
+2. npm install
+3. bower install
+3. cordova add platform android.
 
-A starting project for Ionic that optionally supports using custom SCSS.
+Angular version used =1.3.13
 
-## Using this project
+#setting up android Environment
+==============================
+https://cordova.apache.org/docs/en/latest/guide/platforms/android/
 
-We recommend using the [Ionic CLI](https://github.com/ionic-team/ionic-cli) to create new Ionic projects that are based on this project but use a ready-made starter template.
+#running the Project
+========================
 
-For example, to start a new Ionic project with the default tabs interface, make sure the `ionic` utility is installed:
+ionic cordova run android -l -s
 
-```bash
-$ npm install -g ionic cordova
-```
+#BUilding the Project 
+=========================
+cordova build android
 
-Then run:
-
-```bash
-$ ionic start myProject tabs --type=ionic1
-```
-
-More info on this can be found on the Ionic [Getting Started](https://ionicframework.com/getting-started) page and the [Ionic CLI](https://github.com/ionic-team/ionic-cli) repo.
-
-## Issues
-
-Issues have been disabled on this repo. If you do find an issue or have a question, consider posting it on the [Ionic Forum](https://forum.ionicframework.com/). If there is truly an error, follow our guidelines for [submitting an issue](https://ionicframework.com/submit-issue/) to the main Ionic repository.
+#Check for cordova plugin miss
+==============================
+1. cordova plugin add cordova-plugin-browsersync
+2. 

@@ -4,16 +4,16 @@
   angular
     .module('app')
     .constant('server', {
-      host: 'http://test1234.us-east-1.elasticbeanstalk.com',
-      dashboard:"/api/categories",
-      posttask:"/api/posttask",
-      LoginUserInfoURL: '/api/users/me',
-      LoginURL:'/auth/local',
-      SignInURL:'/api/users'
+      host: 'http://task-management-dev.us-east-1.elasticbeanstalk.com/',
+      dashboard:"api/categories",
+      posttask:"api/posttask",
+      LoginUserInfoURL: 'api/users/me',
+      LoginURL:'auth/local',
+      SignInURL:'api/users'
 
     })
-  .constant('ACTIQXAPP', {
-      ServiceUrl: 'http://test1234.us-east-1.elasticbeanstalk.com'    
+  .constant('GCM',{
+    senderID:'240046301411'
   })
     .constant('langMessage',{
       EnterFirstName:"Enter First Name",
@@ -34,10 +34,5 @@
       PasswordChangedSuccessfully:"Password Changed Successfully"
     })
 
-    .constant('ACTIQX_SERVICE_URI', {
-        LoginUserInfoURL: '/api/users/me',
-        LoginURL:'/auth/local',
-        SignInURL:'/api/users'
-
-    });
+    
 })();

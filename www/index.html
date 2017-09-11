@@ -24,17 +24,21 @@
   <link rel="stylesheet" href="lib/ionic-material/dist/ionic.material.css" />
   <link rel="stylesheet" href="lib/ionic-material/dist/ionic.material.min.css" />
 
+  <link rel="stylesheet" href="lib//materialize-clockpicker/dist/css/materialize.clockpicker.css" />
+
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
 
     <!-- ionic/angularjs js -->
-   
+   <script async defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
     <script src="lib/jquery/dist/jquery.js"></script>
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular-animate/angular-animate.js"></script>
+
   <script src="lib/angular-sanitize/angular-sanitize.js"></script>
   <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="lib/angular-resource/angular-resource.js"></script>
    <script src="lib/ionic/js/ionic.bundle.js"></script>
  
   <script src="lib/materialize/bin/materialize.js"></script>
@@ -68,13 +72,27 @@
  <script src="js/component/factory/factory.module.js"></script>
 <script src="js/component/services/service.module.js"></script>
   <script src="js/modules/layout/layout.modules.js"></script>
+   <script src="js/component/directive/directive.module.js"></script>
   <script src="js/modules/layout/layout.controller.js"></script>
+<!--Factory  -->
    <script src="js/component/factory/actiqxapi.factory.js"></script>
 <script src="js/component/factory/dataservice.factory.js"></script>
 <script src="js/component/factory/chat.factory.js"></script>
+<!--Services  -->
 <script src="js/component/services/session.service.js"></script>
 <script src="js/component/services/common.service.js"></script>
 <script src="js/component/services/api.service.js"></script>
+
+<script src="js/component/services/commonUtil.service.js"></script>
+<script src="js/component/services/shared.service.js"></script>
+
+
+<!--directive  -->
+ <script src="js/component/directive/dashboard.directive.js"></script>
+  
+  <script src="js/component/directive/timepicker.directive.js"></script>
+ 
+
 <script src="js/modules/signup/signup.module.js"></script>
   <script src="js/modules/signup/signup.controller.js"></script>
   <script src="js/modules/login/login.module.js"></script>
@@ -95,11 +113,8 @@
 
   <script src="js/modules/dashboard/dashboard.controller.js"></script>
    <script src="js/modules/dashboard/categorydetails.controller.js"></script>
-  <script src="js/component/directive/directive.module.js"></script>
-  <script src="js/component/directive/dashboard.directive.js"></script>
-  <script src="js/component/directive/autocomplete.directive.js"></script>
-  <script src="js/component/directive/autocompleteview.directive.js"></script>
-  <script src="js/component/directive/timepicker.directive.js"></script>
+ 
+ 
 
  <script src="js/modules/profile/profile.module.js"></script>
   <script src="js/modules/profile/profile.controller.js"></script>
