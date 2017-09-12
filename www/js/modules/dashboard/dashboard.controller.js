@@ -5,8 +5,8 @@
     .module('app.dashboard')
     .controller('dashboardCtrl', dashboardCtrl)
 
-  dashboardCtrl.$inject = ['$q', 'logger', 'dashboardService','commonService','sessionService','dataFactory'];
-  function dashboardCtrl($q, logger, dashboardService,commonService,sessionService,dataFactory) {
+  dashboardCtrl.$inject = ['$q', 'logger','sharedService','server','commonService','sessionService','dataFactory'];
+  function dashboardCtrl($q, logger,sharedService,server,commonService,sessionService,dataFactory) {
 
     var vm = this;
     vm.tileInfoList = [];
@@ -22,7 +22,8 @@
       commonService.pageGo('/dashboard');
     }*/
     function getDashboard() {
-      return dashboardService.getdashboarddata().then(function (data) {
+    
+      return   sharedService.getData(`${server.dashboard}`).then(function (data) {
         vm.tileInfoList = angular.fromJson(data);
         return vm.tileInfoList;
       })

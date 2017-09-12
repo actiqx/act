@@ -47,20 +47,42 @@
         <div class='row rowContent'>
           <div class="input-field col s6">
             <label for="timepicker_from">From Time </label>
-            <input time-picker id="timepicker_from" ng-model="vm.newuser.timeSlots.start" class="timepicker" type="text">
+            <input date-picker id="timepicker_from" ng-model="vm.newuser.timeSlots.start" class="timepicker" type="text">
           </div>
           <div class="input-field col s6">
             <label for="timepicker_to">To Time </label>
-            <input time-picker id="timepicker_to" ng-model="vm.newuser.timeSlots.end" class="timepicker" type="text">
+            <input date-picker id="timepicker_to" ng-model="vm.newuser.timeSlots.end" class="timepicker" type="text">
           </div>
         </div>
         <div class="row rowContent">
           <div class="input-field col s12">
             <label for="location">Location</label>
-            <input id="location" vs-google-autocomplete ng-model="vm.locAddress.name" vs-place="vm.locAddress.place" vs-latitude="vm.locAddress.components.location.lat"
-              vs-longitude="vm.locAddress.components.location.long" type="text" name="address" id="address" class="form-control">
+             <input id="location" vs-google-autocomplete ng-model="vm.locAddress.name" vs-place="vm.locAddress.place" vs-latitude="vm.locAddress.components.location.lat"
+              vs-longitude="vm.locAddress.components.location.long" type="text" name="address" id="address" class="form-control"> 
+              <!-- <input type="text" location-suggestion location="location">      -->
           </div>
         </div>
+        <script id="location.html" type="text/ng-template">
+          <ion-modal-view>
+            <ion-header-bar class="item-input-inset">
+              <label class="item-input-wrapper">
+          <i class="icon ion-ios7-search placeholder-icon"></i>
+          <input type="search" ng-model="search.query" placeholder="Search">
+        </label>
+            </ion-header-bar>
+            <ion-content>
+              <ion-list>
+                <ion-item ng-show="search.error">
+                  {{search.error}}
+                </ion-item>
+                <ion-item ng-repeat="suggestion in search.suggestions" ng-click="choosePlace(suggestion)">
+                  {{suggestion.description}}
+                </ion-item>
+              </ion-list>
+              <img src="https://developers.google.com/maps/documentation/places/images/powered-by-google-on-white.png" alt="" />
+            </ion-content>
+          </ion-modal-view>
+        </script>
         <br />
 
         <center>

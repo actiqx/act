@@ -5,14 +5,14 @@
     .module('app')
     .run(runApp)
 
-  runApp.$inject = ['$ionicPlatform', '$http', '$cordovaPushV5', '$rootScope'];
+  runApp.$inject = ['$ionicPlatform', '$http', '$cordovaPushV5', '$rootScope','GCM'];
 
-  function runApp($ionicPlatform, $http, $cordovaPushV5, $rootScope) {
+  function runApp($ionicPlatform, $http, $cordovaPushV5, $rootScope,GCM) {
 
     $ionicPlatform.ready(function () {
       var options = {
         android: {
-          senderID: "125954626318"
+          senderID: GCM.senderID
         },
         ios: {
           alert: "true",

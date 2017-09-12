@@ -29,12 +29,12 @@
             "cordova-plugin-whitelist": {},
             "ionic-plugin-keyboard": {},
             "phonegap-plugin-push": {
-                "SENDER_ID": "125954626318"
-            },
-            "cordova-plugin-geolocation": {}
+                "SENDER_ID": "240046301411"
+            }
         },
         "platforms": [
-            "android"
+            "android",
+            "browser"
         ]
     }
 }
