@@ -5,9 +5,27 @@
         .module('app.signup')
         .controller('signupCtrl', signupCtrl);
 
-   signupCtrl.$inject = ['$q', 'logger','$window', '$http', '$state', 'ActiqxApiFactory', 'ACTIQX_SERVICE_URI'];
- function signupCtrl($q, logger, $window, $http, $state, ActiqxApiFactory, ACTIQX_SERVICE_URI) {
+   signupCtrl.$inject = ['$q', 'logger','$window', '$http', '$state', 'ActiqxApiFactory', 'ACTIQX_SERVICE_URI','$cordovaGeolocation'];
+ function signupCtrl($q, logger, $window, $http, $state, ActiqxApiFactory, ACTIQX_SERVICE_URI,$cordovaGeolocation) {
+
         var vm = this;
+        var posOptions = {timeout: 10000, enableHighAccuracy: false};
+        $cordovaGeolocation
+          .getCurrentPosition(posOptions)
+          .then(function (position) {
+            var lat  = position.coords.latitude
+            var long = position.coords.longitude
+          }, function(err) {
+            // error
+          });
+        GeoService.getPosition()
+        .then(function(position) {
+          this.coords = position.coords;
+          alert(position);
+          //showMap(position.coords);
+        }, function(err) {
+          console.log('getCurrentPosition error: ' + angular.toJson(err));
+        });
         vm.newuser = {
             "name": "",
             "email": "",
@@ -33,6 +51,14 @@
         };
             
         vm.SignInCall=function(){
+            GeoService.getPosition()
+            .then(function(position) {
+              this.coords = position.coords;
+              console.log(position);
+              //showMap(position.coords);
+            }, function(err) {
+              console.log('getCurrentPosition error: ' + angular.toJson(err));
+            });
           var requestData={
             "name": vm.newuser.name,
             "email": vm.newuser.email,

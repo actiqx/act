@@ -4,7 +4,8 @@
   angular
     .module('app')
     .constant('server', {
-      host: 'http://test1234.us-east-1.elasticbeanstalk.com',
+      //host: 'http://test1234.us-east-1.elasticbeanstalk.com',
+      host:'http://localhost:5080',  
       dashboard:"/api/categories",
       posttask:"/api/posttask",
       LoginUserInfoURL: '/api/users/me',
@@ -13,7 +14,8 @@
 
     })
   .constant('ACTIQXAPP', {
-      ServiceUrl: 'http://test1234.us-east-1.elasticbeanstalk.com'    
+      //ServiceUrl: 'http://test1234.us-east-1.elasticbeanstalk.com' 
+      ServiceUrl:'http://localhost:5080'   
   })
     .constant('langMessage',{
       EnterFirstName:"Enter First Name",

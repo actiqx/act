@@ -66,8 +66,8 @@
         $cordovaToast
           .show(data.message, 'long', 'top')
           .then(function (success) {
-            // $location.path('/app/notification');
-            // $rootScope.$apply();
+             $location.path('/app/notification');
+             $rootScope.$apply();
           }, function (error) {
             alert(error);
           });
