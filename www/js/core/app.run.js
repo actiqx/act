@@ -5,9 +5,9 @@
     .module('app')
     .run(runApp)
 
-  runApp.$inject = ['$ionicPlatform', '$http', '$cordovaPushV5', '$rootScope','GCM'];
+  runApp.$inject = ['$ionicPlatform', '$http', '$cordovaPushV5', '$rootScope','GCM','commonService'];
 
-  function runApp($ionicPlatform, $http, $cordovaPushV5, $rootScope,GCM) {
+  function runApp($ionicPlatform, $http, $cordovaPushV5, $rootScope,GCM,commonService) {
 
     $ionicPlatform.ready(function () {
       var options = {
@@ -59,14 +59,17 @@
     /*
  * Push notification events
  */
-    $rootScope.$on('$cordovaPushV5:notificationReceived', function (event, data) {  // use two variables here, event and data !!!
+    $rootScope.$on('$cordovaPushV5:notificationReceived', function (event, data) { 
+      // use two variables here, event and data !!!
       if (data.additionalData.foreground === false) {
         // do something if the app is in foreground while receiving to push - handle in app push handling
         // For the case in app
         $cordovaToast
           .show(data.message, 'long', 'top')
           .then(function (success) {
-             $location.path('/app/notification');
+            commonService.pageGo("posttask");
+           // $state.go('app.posttask');
+            // $location.path('/app/notification');
              $rootScope.$apply();
           }, function (error) {
             alert(error);
@@ -76,7 +79,8 @@
         $cordovaToast
           .show(data.message, 'long', 'center')
           .then(function (success) {
-            // $state.go('app.notification');
+            commonService.pageGo("posttask");
+           // $state.go('app.posttask');
           }, function (error) {
             alert(error);
           });

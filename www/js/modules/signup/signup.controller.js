@@ -18,14 +18,14 @@
           }, function(err) {
             // error
           });
-        GeoService.getPosition()
-        .then(function(position) {
-          this.coords = position.coords;
-          alert(position);
-          //showMap(position.coords);
-        }, function(err) {
-          console.log('getCurrentPosition error: ' + angular.toJson(err));
-        });
+        // GeoService.getPosition()
+        // .then(function(position) {
+        //   this.coords = position.coords;
+        //   alert(position);
+        //   //showMap(position.coords);
+        // }, function(err) {
+        //   console.log('getCurrentPosition error: ' + angular.toJson(err));
+        // });
         vm.newuser = {
             "name": "",
             "email": "",

@@ -13,7 +13,8 @@
 
     })
   .constant('GCM',{
-    senderID:'240046301411'
+   senderID:'240046301411'
+   ///senderID:'125954626318'
   })
     .constant('langMessage',{
       EnterFirstName:"Enter First Name",
@@ -33,6 +34,15 @@
       ReEnterNewPassword:"Re-enter New Password",
       PasswordChangedSuccessfully:"Password Changed Successfully"
     })
+    .constant('ACTIQXAPP', {
+      //ServiceUrl: 'http://test1234.us-east-1.elasticbeanstalk.com' 
+      ServiceUrl:'http://task-management-dev.us-east-1.elasticbeanstalk.com/'   
+  })
+  .constant('ACTIQX_SERVICE_URI', {
+    LoginUserInfoURL: '/api/users/me',
+    LoginURL:'/auth/local',
+    SignInURL:'/api/users'
 
+});
     
 })();
